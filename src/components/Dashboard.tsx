@@ -6,33 +6,34 @@ import Cartel from "./Cartel"
 import { LayoutList } from "lucide-react"
 import ChartOne from "./ChartOne"
 import ChartTwo from "./ChartTwo"
+import Image from "next/image"
 
 function Dashboard() {
   return (
     <section className='container mx-auto grid grid-cols-1  md:grid-cols-3 gap-4 grid-flow-row md:grid-rows-5 h-full w-full py-4 px-4 md:py-6 md:px-0'>
         <div className=' row-span-1 md:row-span-1'>
-          <Card className="w-full h-full rounded-sm">
+          <Card className="w-full h-full rounded-sm flex justify-center items-center py-4">
+             <Image src={"/logoOne.png"} alt="logo" width={300} height={300} />
+          </Card>
+        </div>
+        <div className=' row-span-1'>
+          <Card className="w-full h-full rounded-sm" radius="sm">
             <Cartel label="Completados" dataH={30} dataP={12}  />
           </Card>
         </div>
         <div className=' row-span-1'>
-          <Card className="w-full h-full rounded-sm" radius="sm">
+          <Card className="w-full h-full rounded-sm " radius="sm">
             <Cartel label="Cancelados" dataH={40} dataP={13} />
-          </Card>
-        </div>
-        <div className=' row-span-1'>
-          <Card className="w-full h-full rounded-sm" radius="sm">
-            4
-          </Card>
+          </Card> 
         </div>
         <div className=' col-span-1 md:col-start-1 md:col-span-2 w-full h-full  md:row-span-2'>
-          <Card className="w-full h-full rounded-sm flex justify-center items-center " radius="sm">
+          <Card className="w-full h-full rounded-sm flex justify-center items-center py-2 " radius="sm">
             <ChartOne />
           </Card>
         </div>
         <div className=' col-span-1 md:col-start-1 md:col-span-2  md:row-span-2 '>
-        <Card className="w-full h-full rounded-sm" radius="sm">
-          <ChartTwo />
+          <Card className="w-full h-full rounded-sm flex justify-center items-center py-2" radius="sm">
+            <ChartTwo />
           </Card>
         </div>
         <div className='col-span-1 md:col-start-3 md:row-start-2 md:row-end-6 h-full w-full'>

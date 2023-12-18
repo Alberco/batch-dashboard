@@ -17,11 +17,11 @@ export function ThemeSwitcher() {
 
   return (
     <div className="text-xs flex flex-col justify-center items-center gap-2">
-      <button  className="border-2 border-white/10 p-1 rounded-xl bg-white/5 max-w-min" onClick={() => setTheme('light')}>
-        <Sun color={`${theme === "light" ?  'black': 'white'}`} />
+      <button  className={`border-2 border-white/10 p-1 rounded-xl  max-w-min ${theme === "light" ?  'bg-black': 'bg-transparent'}`} onClick={() => setTheme('light')}>
+        <Sun color={`${theme === "light" ?  'white': 'white'}`} />
       </button>
-      <button  className="border-2 border-white/10 p-1 rounded-xl bg-white/5 max-w-min" onClick={() => setTheme('dark')}>
-        <Moon color={`${theme === "light" ?  'black': 'white'}`}/>
+      <button  className={`border-2 border-white/10 p-1 rounded-xl  max-w-min ${theme === "dark" ?  'bg-white': 'bg-transparent'}`} onClick={() => setTheme('dark')}>
+        <Moon color={`${theme === "dark" ?  'black': 'black'}`}/>
       </button>
     </div>
   )

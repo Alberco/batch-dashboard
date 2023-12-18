@@ -5,5 +5,5 @@ export interface Batch {
   horaIni?: string
   hostName?: string
   ipAddress?: string
-  nombrePro?: string
+  nameProgram?: string
 }

@@ -4,7 +4,7 @@ import Link from "next/link"
 
 function Navbar() {
   return (
-    <nav className="fixed inset-y-4 border-2 border-white/20 rounded-md  w-20 flex flex-col items-center py-4 justify-between">
+    <nav className="fixed inset-y-2 border-2 border-white/20 rounded-md  w-20 flex flex-col items-center py-4 justify-between">
       <ul>
         <Link  href={"/"}>
            <Radar size={30} className='stroke-black dark:stroke-white ' />
@@ -22,12 +22,12 @@ function Navbar() {
             </Link>
         </li>
         <li>
-            <Link  href={"/"}>
+            <Link  href={"/table-program"}>
               <Table />
             </Link>
         </li>
         <li>
-            <Link href={"/"}>
+            <Link href={"/search-program"}>
               <SearchCheck />
             </Link>
         </li>
